@@ -1,8 +1,10 @@
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
+
 
 class Article(models.Model):
     title = models.CharField(max_length=200)
-    content = models.TextField()
+    content = RichTextUploadingField()
     image = models.ImageField(upload_to='articles_uploads/')
     created_date = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
