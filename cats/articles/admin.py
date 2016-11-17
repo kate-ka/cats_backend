@@ -4,7 +4,6 @@ from django import forms
 from articles.models import Article
 
 
-
 class ArticleAdminForm(forms.ModelForm):
     content = forms.CharField(widget=CKEditorUploadingWidget())
 
@@ -20,9 +19,6 @@ class ArticleAdmin(admin.ModelAdmin):
     list_filter = ('title', 'created_date', 'published_date')
     search_fields = ('title', 'content')
     form = ArticleAdminForm
-
-
-
 
 
 admin.site.register(Article, ArticleAdmin)
