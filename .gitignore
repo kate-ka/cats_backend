@@ -89,3 +89,5 @@ ENV/
 .ropeproject
 /.idea/
 
+/cats/media/
+/cats/static_collected/
