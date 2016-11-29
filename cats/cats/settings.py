@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'rest_framework',
+    'corsheaders',
+    'polls',
+
+
 
 ]
 
@@ -52,6 +56,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
 ]
 
 ROOT_URLCONF = 'cats.urls'
@@ -200,6 +207,7 @@ CKEDITOR_CONFIGS = {
     }
 }
 
+
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'djangorestframework_camel_case.render.CamelCaseJSONRenderer',
@@ -216,3 +224,7 @@ REST_FRAMEWORK = {
 
 if DEBUG:
     REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] += ('rest_framework.renderers.BrowsableAPIRenderer',)
+
+CORS_ORIGIN_WHITELIST = (
+    'localhost:9000'
+)

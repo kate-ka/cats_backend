@@ -25,4 +25,3 @@ class Article(models.Model):
         return self.title
 
 
-
