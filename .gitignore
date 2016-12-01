@@ -88,8 +88,7 @@ ENV/
 # Rope project settings
 .ropeproject
 /.idea/
-media/
-static_collected/
 
 /cats/media/
 /cats/static_collected/
+/cats/cats/settings_local.py

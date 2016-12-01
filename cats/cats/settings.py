@@ -84,20 +84,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'cats.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cats_project',
-        'USER': 'lastfm_data_user',
-        'PASSWORD': 'qwerty',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
-
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
@@ -228,3 +214,6 @@ if DEBUG:
 CORS_ORIGIN_WHITELIST = (
     'localhost:9000'
 )
+
+
+from .settings_local import *
